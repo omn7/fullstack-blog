@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .blog-box {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .blog-box h2 {
+            margin-top: 0;
+        }
+        .email {
+            margin: 10px 0;
+        }
+        .like-button {
+            background-color: #6200ea;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .like-button:hover {
+            background-color: #3700b3;
+        }
+    </style>
+</head>
+<body>
+    <div action="/Profile" method="" ></div>
+    
+    <div class="blog-box">
+        
+        <% user.posts.forEach(post => { %>
+            <p><%= post.content %></p>
+        <% }); %>
+        <div class="email">Email: your-email@example.com</div>
+        <button class="like-button">Like</button>
+    </div>
+</body>
+</html>
